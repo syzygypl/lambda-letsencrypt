@@ -83,13 +83,13 @@ def get_user():
 
 
 def notify_email(subject, message):
-    if cfg.SNS_TOPIC_ARN:
-        logger.info("Sending notification")
-        sns.publish(
-            TopicArn=cfg.SNS_TOPIC_ARN,
-            Subject="[Lambda-LetsEncrypt] {}".format(subject),
-            Message=message
-        )
+#    if cfg.SNS_TOPIC_ARN:
+#        logger.info("Sending notification")
+#        sns.publish(
+#            TopicArn=cfg.SNS_TOPIC_ARN,
+#            Subject="[Lambda-LetsEncrypt] {}".format(subject),
+#            Message=message
+#        )
 
 
 def s3_challenge_solver(domain, token, keyauth, bucket=None, prefix=None):
